@@ -23,12 +23,14 @@ class event(Cog_extension):
         if str(message.channel) == "private" and message.content != "":
             await message.channel.purge(limit = 1 )
 
-    @commands.Cog.listener()
-    async def on_message(self,message):
-        if message.content.startswith('!p ') and str(message.channel) == "驚嘆號批":
-            await message.channel.send('good song')
-        elif str(message.channel) == "驚嘆號批":
-            await message.channel.purge(limit = 1)
+    # @commands.Cog.listener()
+    # async def on_message(self,message):
+    #     if message.content.startswith('!p ') and str(message.channel) == "驚嘆號批":
+    #         await message.channel.send('good song')
+    #     elif message.content.startswith('!p ') and str(message.channel) == "驚嘆號p":
+    #         await message.channel.send('good song')
+    #     elif message.content.startswith('!p ') and str(message.channel) != "驚嘆號p" or "驚嘆號批":
+    #         await message.channel.purge(limit = 1)
     
 def setup(client):
     client.add_cog(event(client))

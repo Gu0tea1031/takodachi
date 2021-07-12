@@ -22,6 +22,13 @@ class react(Cog_extension):
     @commands.command()
     async def clean(self,ctx,num:int):
         await ctx.channel.purge(limit=num+1)
+        await ctx.channel.send('Deleted {} message(s)'.format(num))
+    
+    @commands.command()
+    async def cln(self,ctx,num:int):
+        await ctx.channel.purge(limit=num+1)
+
+
 
 
 
