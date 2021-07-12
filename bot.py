@@ -7,7 +7,7 @@ import os
 with open('setting.json','r',encoding='utf8') as jfile:
     jdata = json.load(jfile)
 
-client = commands.Bot(command_prefix='!')
+client = commands.Bot(command_prefix='?')
 
 @client.event
 async def on_ready():
